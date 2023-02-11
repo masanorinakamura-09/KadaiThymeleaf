@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Kadai of Thymeleaf</title>
+</head>
+<body>
+    <h1>[[#{content.title}]]</h1>
+    <h2>[[#{content.message}]]</h2>
+    <p>値を入力してください。</p>
+    <p th:unless="${previous} eq 'NOT PARAM'">前回入力された値は「[[${previous}]]」でした。</p>
+
+    <form method="post" action="/output">
+        <input type="text" name="previous">
+        <button type="submit">送信</button>
+    </form>
+
+</body>
+</html>

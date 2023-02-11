@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Kadai of Thymeleaf</title>
+</head>
+<body>
+    <h1>[[#{content.title}]]</h1>
+    <h2>[[#{content.message}]]</h2>
+    <p>入力された値は[[${previous}]]です</p>
+    <p><a th:href="@{/input/(previous=${param.previous[0]})}">入力画面へ戻る</a></p>
+
+</body>
+</html>
